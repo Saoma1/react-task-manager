@@ -61,7 +61,7 @@ function App() {
 
   return (
     <div className="container">
-      <Header/>
+      <Header onAdd={() => setViewAdd(!viewAdd)} viewAdd={viewAdd}/>
       {viewAdd && <AddTasks onAdd={addTask}/>}
       <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
     </div>
